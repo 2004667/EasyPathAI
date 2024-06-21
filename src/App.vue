@@ -1,4 +1,3 @@
-
 <script >
 import WelcomePage from "./components/WelcomePage.vue";
 export default{
@@ -11,8 +10,9 @@ export default{
 
 <template>
   <div class="min-h-screen bg-cover bg-center bg-[#FBFBFB] md:bg-custom  max-[767px]:bg-mobile" >
-    <WelcomePage/>
+    <router-view></router-view>
   </div>
+  
 </template>
 
 <style scoped>
