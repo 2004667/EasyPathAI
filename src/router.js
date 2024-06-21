@@ -5,6 +5,6 @@ export default createRouter({
     history: createWebHashHistory(),
     routes:  [
         {path: '/land' , component: Landing},
-        {path: '/welcome' , component: Welcome}
+        {path: '/' , component: Welcome}
     ]
 }) 
