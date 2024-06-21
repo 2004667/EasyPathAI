@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'custom': "url('./src/assets/images/baground.png')",
-        'mobile': "url('./src/assets/images/Mobile_background.png')"
+        'custom': "url('./src/assets/images/main_background.svg')",
+        'mobile': "url('./src/assets/images/mobile_main_background.svg')"
       },
        screens: {
         
