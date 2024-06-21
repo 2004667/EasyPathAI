@@ -3,7 +3,7 @@
 </script>
 <template>
       <div class="
-          flex justify-center flex-wrap " >
+          flex justify-center flex-wrap" >
         <div class="
             font-['Noto_Sans'] font-medium flex flex-wrap justify-center
             max-[767px]:text-[34px] max-[767px]:mt-[220px]
@@ -41,15 +41,15 @@
         <button id="signingoogle" class="
             rounded-md flex items-center justify-center border-[#E96852]
             md:border-2 md:w-[25.6875rem] md:h-[4.125rem] md:mt-[89px] 
-            max-[767px]:border-2 max-[767px]:w-[9.25rem] max-[767px]:h-[1.425rem] max-[767px]:mt-[25px]">
+            max-[767px]:border max-[767px]:w-[9.25rem] max-[767px]:h-[1.425rem] max-[767px]:mt-[25px]">
           <img class="
             md:mr-3
             max-[767px]:w-[15px] max-[767px]:h-[17px] max-[767px]:mr-2
             " src="../assets/images/google_logo.svg" alt="">
           <div class="
-            border-r-2 border-[#E96852] 
-            md:h-[62px]
-            max-[767px]:h-[20px]">
+            border-[#E96852] 
+            md:h-[62px] md:border-r-2 
+            max-[767px]:h-[21px] max-[767px]:border-r">
           </div>
           <p class="
             max-[767px]:text-[11px] max-[767px]:ml-2  
