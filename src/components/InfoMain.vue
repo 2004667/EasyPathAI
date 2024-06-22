@@ -2,13 +2,14 @@
 
 </script>
 <template>
-      <div class="
+     <div class="
             flex justify-center items-center
             max-[767px]:flex-wrap
             " >
           <div class="
-                    flex flex-wrap mt-[100px] justify-center
-                    md:w-[552px] md:h-[372px] md:ml-[45px]
+                    flex flex-wrap justify-center
+                    md:w-[552px] md:h-[372px] md:ml-[45px] md:mt-[150px]
+                    max-[767px]:mt-[130px]
                     ">
                 <h1 class="
                     font-['Noto_Sans'] font-bold
@@ -33,18 +34,18 @@
                 </button> 
             </div>
             <img class="flex
-                md:w-[498px] md:h-[336px] md:mt-[100px] md:items-center
+                md:w-[498px] md:h-[336px] md:mt-[150px] md:items-center
                 max-[767px]:mt-[40px] max-[767px]:w-[281px] max-[767px]:h-[168px]
                 " src="../assets/images/info_main_logo.svg" alt="">
-           <button class="
-                font-['Noto_Sans'] font-bold bg-[#E96852] rounded drop-shadow-lg text-[#FFFFFF] text-center
-                max-[767px]:mt-[30px] max-[767px]:w-[111px] max-[767px]:h-[30px] 
-                md:hidden">
+            <div class="max-[767px]:w-full max-[767px]:flex max-[767px]:justify-center">
+                <button class="
+                    font-['Noto_Sans'] font-bold bg-[#E96852] rounded drop-shadow-lg text-[#FFFFFF] text-center
+                    max-[767px]:mt-[30px] max-[767px]:w-[111px] max-[767px]:h-[30px] 
+                    md:hidden">
                 Начать
            </button>
+            </div>
       </div>
-      <Info_aichat/>
-
 </template>
 <style scoped>
 </style>
