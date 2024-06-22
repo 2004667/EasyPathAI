@@ -8,8 +8,8 @@
             " >
           <div class="
                     flex flex-wrap justify-center
-                    md:w-[552px] md:h-[372px] md:ml-[45px] md:mt-[150px]
-                    max-[767px]:mt-[130px]
+                    md:w-[552px] md:h-[372px] md:ml-[45px] md:mt-[120px]
+                    max-[767px]:mt-[80px]
                     ">
                 <h1 class="
                     font-['Noto_Sans'] font-bold

@@ -6,7 +6,7 @@
             flex justify-center flex-wrap 
             w-full bg-[#2F2B2B] 
             md:h-[450px] md:mt-[220px] md:mb-[200px]
-            max-[767px]:mt-[150px] max-[767px]:mb-[200px] max-[767px]:h-[300px] max-[767px]:items-center">
+            max-[767px]:mt-[190px] max-[767px]:mb-[200px] max-[767px]:h-[300px] max-[767px]:items-center">
         <div class="flex justify-center md:items-center flex-wrap">
             <div class="
                     flex flex-wrap">
