@@ -9,7 +9,7 @@ export default{
 </script>
 
 <template>
-  <div class="min-h-screen bg-cover bg-center bg-[#FBFBFB] md:bg-custom  max-[767px]:bg-mobile" >
+  <div class="bg-[#FBFBFB] md:bg-custom  max-[767px]:bg-mobile" >
     <router-view></router-view>
   </div>
   
