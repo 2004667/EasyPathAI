@@ -14,7 +14,7 @@
                     <img class="
                         md:w-[96px] md:h-[72px] md:mb-[15px]
                         max-[767px]:w-[35px] max-[767px]:h-[36px] max-[767px]:mb-[10px]" 
-                        src="../assets/images/yellow_light.svg" alt="">
+                        src="/images/yellow_light.svg" alt="">
                 </div>
                 <h1 class="
                     font-['Noto_Sans'] font-bold text-[#FFFFFF]
@@ -37,7 +37,7 @@
                 max-[767px]:w-[85px] max-[767px]:h-[23px] max-[767px]:text-[9px]
                 ">
                 Start AI Chat
-                <img class="md:w-[14px] md:h-[10px] md:ml-[10px] max-[767px]:w-[5px] max-[767px]:ml-[5px]" src="../assets/images/arrow.svg" alt="">
+                <img class="md:w-[14px] md:h-[10px] md:ml-[10px] max-[767px]:w-[5px] max-[767px]:ml-[5px]" src="/images/arrow.svg" alt="">
             </button>
         </div>
       </div>

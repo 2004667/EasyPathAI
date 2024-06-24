@@ -13,7 +13,7 @@
             max-[767px]:w-[390px] max-[767px]:h-[62px]
             flex  items-center"> 
             <img src="
-              ../assets/images/Land_logo.svg" alt="" class="
+              /images/Land_logo.svg" alt="" class="
               flex items-center 
               md:h-[52px] md:w-[32px] md:mt-[10px]
               max-[767px]:h-[29px] max-[767px]:w-[20px] max-[767px]:mt-[4px] max-[767px]:ml-[10px]"/>
@@ -22,7 +22,7 @@
                 md:mb-[0px]  
                 max-[767px]:text-[24px]">EasyPathAI</h1>
             <div class="ml-[200px] md:hidden">
-                <img class="flex justify-end" src="../assets/images/settings.svg" alt="">
+                <img class="flex justify-end" src="/images/settings.svg" alt="">
             </div>
        </div>
        <div class="
@@ -46,7 +46,7 @@
            md:ml-[114px]  md:text-[22px] flex items-center
            max-[767px]:hidden"> 
            <h1>example@gmail.com</h1>
-           <img src="../assets/images/Crush.svg" alt="" class="
+           <img src="/images/Crush.svg" alt="" class="
                  max-[767px]:hidden  
                  md:h-[60px] md:w-[60px] md:ml-[15px] flex items-center">
        </div>
@@ -68,7 +68,7 @@
               mr-[30px]">
                Поиск...
           </h1>
-         <img src="../assets/images/search.svg" alt="" class="
+         <img src="/images/search.svg" alt="" class="
            h-[19px] w-[19px] mr-[5px] ">
       </div>  
     </div>

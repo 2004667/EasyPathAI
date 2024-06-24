@@ -22,7 +22,7 @@
               md:ml-2 md:mr-2">
               в
           </h1>
-          <img src="../assets/images/mega_logo.svg" alt="" class="
+          <img src="/images/mega_logo.svg" alt="" class="
               md:w-[3.8125rem] md:h-[5.125rem] md:ml-2 md:mr-2 md:mt-7
               max-[767px]:w-[1.875rem] max-[767px]:h-[2.375rem] max-[767px]:mt-2.5 max-[767px]:ml-1 max-[767px]:mr-1">
           <h1 class="flex">
@@ -45,7 +45,7 @@
           <img class="
             md:mr-3
             max-[767px]:w-[15px] max-[767px]:h-[17px] max-[767px]:mr-2
-            " src="../assets/images/google_logo.svg" alt="">
+            " src="/images/google_logo.svg" alt="">
           <div class="
             border-[#E96852] 
             md:h-[62px] md:border-r-2 
