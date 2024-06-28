@@ -1,8 +1,21 @@
 <script>
+import { decodeCredential } from 'vue3-google-login'
+import { mapActions } from 'vuex'
 
+export default {
+  methods: {
+    ...mapActions(['login']),
+    callback(response) {
+      const user = decodeCredential(response.credential)
+      this.login(user)
+      this.$router.push('/land')
+    },
+  },
+}
 </script>
 <template>
-      <div class="
+  <div class="h-screen">
+        <div class="
           flex justify-center flex-wrap" >
         <div class="
             font-['Noto_Sans'] font-medium flex flex-wrap justify-center
@@ -35,31 +48,15 @@
             flex drop-shadow-lg font-['Noto_Sans'] font-medium
             max-[767px]:text-[10px] max-[767px]:mt-[25px]
             md:text-[36px] md:mt-[89px]">
-            используй силу ИИ для подготовки к собеседованиям
+            используй силу ИИ для подготовки к собеседованиям 
           </p>
         </div>
-        <button id="signingoogle" class="
-            rounded-md flex items-center justify-center border-[#E96852]
-            md:border-2 md:w-[25.6875rem] md:h-[4.125rem] md:mt-[89px] 
-            max-[767px]:border max-[767px]:w-[9.25rem] max-[767px]:h-[1.425rem] max-[767px]:mt-[25px]">
-          <img class="
-            md:mr-3
-            max-[767px]:w-[15px] max-[767px]:h-[17px] max-[767px]:mr-2
-            " src="/images/google_logo.svg" alt="">
-          <div class="
-            border-[#E96852] 
-            md:h-[62px] md:border-r-2 
-            max-[767px]:h-[21px] max-[767px]:border-r">
-          </div>
-          <p class="
-            max-[767px]:text-[11px] max-[767px]:ml-2  
-            md:text-[33px] md:ml-6 md:mr-4
-            max-[767px]:mr-1">
-            Sign in with Google
-          </p>
-        </button>
+        <GoogleLogin class="md:mt-[89px] max-[767px]:mt-[25px]" :callback="callback" promt auto-login>
+          </GoogleLogin>
+
       </div>
 
+  </div>
 </template>
 <style scoped>
 </style>

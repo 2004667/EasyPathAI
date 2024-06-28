@@ -4,6 +4,7 @@ import InfoMain from './components/InfoMain.vue';
 import InfoAIChat from './components/InfoAIChat.vue';
 import Instructions from './components/Instructions.vue'
 import MentorRequest from './components/MentorRequest.vue';
+import EasyFooter from './components/EasyFooter.vue'
 
 export default {
      name: 'Landing',
@@ -12,7 +13,8 @@ export default {
     InfoMain,
     InfoAIChat,
     Instructions,
-    MentorRequest
+    MentorRequest,
+    EasyFooter
   }
 }
 </script>
@@ -22,6 +24,7 @@ export default {
     <InfoAIChat/>
     <Instructions/>
     <MentorRequest/>
+    <EasyFooter/>
 </template>
 <style scoped>
 
