@@ -2,6 +2,7 @@
 import { mapGetters } from 'vuex'
 import LogOut from './LogOut.vue';
 import { googleLogout } from 'vue3-google-login'
+import { mapActions } from 'vuex'
 export default {
   components: {
     LogOut,
@@ -17,9 +18,11 @@ export default {
     ...mapGetters(['user', 'loggedIn']),
   },
   methods: {
+    ...mapActions(['logout']),
     logOut(){
       console.log('hai')
       googleLogout()
+      this.logout()
       this.$router.push('/')
     },
     changeImage() {
@@ -95,11 +98,13 @@ export default {
            md:ml-[114px]  md:text-[17px] flex items-center
            max-[767px]:hidden"  @click.stop="toggleLogOut"> 
            <LogOut v-if="showLogOut" class="md:ml-[30px]"/>
-           <h1>{{ user.email }}</h1>
-           <img :src="user.picture" alt="" class="
-                 max-[767px]:hidden rounded-full
-                 md:h-[55px] md:w-[55px] md:ml-[15px] flex items-center">
-       </div>
+           <template v-if="user">
+              <h1>{{ user.email }}</h1>
+              <img :src="user.picture" alt="" class="
+                  max-[767px]:hidden rounded-full
+                  md:h-[55px] md:w-[55px] md:ml-[15px] flex items-center">
+            </template>
+        </div>
     </div> 
     <div class="
         flex bg-[#FFFFFF]  drop-shadow-lg text-[#9A9494] text-[22px]  
@@ -142,8 +147,10 @@ export default {
       </div>
     </div>
     <div class="bg-[#FFFFFF] w-[348px] h-[49px] mt-[200px] flex items-center rounded-[5px]">
-          <img :src="user.picture" alt="" width="40px" height="40px" class="ml-[23px] rounded-full">
-          <h1 class="ml-[47px] text-[11px] font-medium flex justify-center">{{ user.email }}</h1>
+          <template v-if="user">
+            <img :src="user.picture" alt="" width="40px" height="40px" class="ml-[23px] rounded-full">
+            <h1 class="ml-[47px] text-[11px] font-medium flex justify-center">{{ user.email }}</h1>
+          </template>
           <button @click="logOut" ><img src="/images/exitac.svg" alt="" class="pl-[30px]" width="72px" height="25px"></button>
     </div>
   </div>

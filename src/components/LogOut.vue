@@ -1,14 +1,16 @@
 <script>
 import { googleLogout } from 'vue3-google-login'
-import { mapGetters } from 'vuex'
+import { mapGetters,mapActions } from 'vuex'
 export default{
     computed: {
         ...mapGetters(['user', 'loggedIn']),
     },
     methods:{
+        ...mapActions(['logout']),
         logOut(){
             console.log('hai')
             googleLogout()
+            this.logout()
             this.$router.push('/')
         }
     }

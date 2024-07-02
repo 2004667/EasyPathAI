@@ -5,7 +5,6 @@ import InfoAIChat from './components/InfoAIChat.vue';
 import Instructions from './components/Instructions.vue'
 import MentorRequest from './components/MentorRequest.vue';
 import EasyFooter from './components/EasyFooter.vue'
-
 export default {
      name: 'Landing',
   components:{
@@ -16,6 +15,7 @@ export default {
     MentorRequest,
     EasyFooter
   }
+  
 }
 </script>
 <template>
