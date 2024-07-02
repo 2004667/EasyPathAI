@@ -14,7 +14,7 @@
                     <img class="
                         md:w-[96px] md:h-[72px] md:mb-[15px]
                         max-[767px]:w-[35px] max-[767px]:h-[36px] max-[767px]:mb-[10px]" 
-                        src="/images/yellow_light.svg" alt="">
+                        src="/images/yellow_light_main.svg" alt="">
                 </div>
                 <h1 class="
                     font-['Noto_Sans'] font-bold text-[#FFFFFF]
