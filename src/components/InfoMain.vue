@@ -39,7 +39,7 @@
           ">
         <img class="block
           w-full h-full object-contain
-          " src="/images/main_backround.svg" alt="">
+          " src="/images/main_img.svg" alt="">
       </div>
       <div class="max-[767px]:w-full max-[767px]:flex  max-[767px]:justify-center">
         <button class="
