@@ -133,18 +133,18 @@ export default {
         <h1 class="text-[22px] text-[#ffffff]">Программы вопросов</h1>
       </div>
       <div class="flex items-center space-x-3 justify-start mr-[70px]">
-        <img src="/images/talk.svg" alt="" />
+        <img src="/images/talk.svg" alt="" width="44px" height="29px"/>
         <h1 class="text-[22px] text-[#ffffff] flex ">Собеседования</h1>
       </div>
       <div class="flex items-center space-x-1  justify-start mr-[80px]">
-        <img src="/images/anketa.svg" alt="" />
+        <img src="/images/anketa.svg" alt="" width="59px" height="32px"/>
         <h1 class="text-[22px] text-[#ffffff] flex ">Найти ментора</h1>
       </div>
     </div>
     <div class="bg-[#FFFFFF] w-[348px] h-[49px] mt-[200px] flex items-center rounded-[5px]">
           <img :src="user.picture" alt="" width="40px" height="40px" class="ml-[23px] rounded-full">
           <h1 class="ml-[47px] text-[11px] font-medium flex justify-center">{{ user.email }}</h1>
-          <button @click="logOut" ><img src="/images/exitac.svg" alt="" class="pl-[30px]"></button>
+          <button @click="logOut" ><img src="/images/exitac.svg" alt="" class="pl-[30px]" width="72px" height="25px"></button>
     </div>
   </div>
 </div>
