@@ -51,6 +51,8 @@
         </button>
       </div>
     </div>
+      <img src="/images/busine.svg">
+      <img src="/images/sun.jpg" alt="">
   </template>
   
   <style scoped>
