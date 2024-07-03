@@ -101,7 +101,7 @@ export default {
            </h1>
        </div>
       <div ref="userInformation" class="
-           md:ml-[114px]  md:text-[17px] flex items-center
+           md:ml-[114px]  md:text-[15px] flex items-center
            max-[767px]:hidden"  @click.stop="toggleLogOut"> 
            <LogOut v-if="showLogOut" class="md:ml-[30px]"/>
            <template v-if="user">
