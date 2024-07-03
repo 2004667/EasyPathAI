@@ -31,7 +31,7 @@
                 <button class="
                     font-['Noto_Sans'] font-bold bg-[#E96852] rounded-lg drop-shadow-lg text-[#FFFFFF] text-center
                     md:w-1/5 md:h-[45px]
-                    max-[767px]:w-1/3 max-[767px]:h-[40px]
+                    max-[767px]:w-1/3 max-[767px]:h-[40px] hover:bg-[#D73900]
                     ">
                     Отправить
                 </button>

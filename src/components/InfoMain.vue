@@ -28,7 +28,7 @@
         <button class="
             font-['Noto_Sans'] font-bold bg-[#E96852] rounded drop-shadow-lg text-[#FFFFFF] text-center
             md:w-[156px] md:h-[37px] md:text-[20px] md:mt-[30px] md:mr-[15px]
-            max-[767px]:hidden
+            max-[767px]:hidden hover:bg-[#D73900]
           ">
           Начать
         </button> 

@@ -36,16 +36,16 @@ export default {
               в
           </h1>
           <img src="/images/mega_logo.svg" alt="" class="
-              md:w-[3.8125rem] md:h-[5.125rem] md:ml-2 md:mr-2 md:mt-7
+              md:w-[3.8125rem] md:h-[5.125rem] md:ml-2 md:mr-2 md:mt-7 animate-spin-pause active:animate-ping
               max-[767px]:w-[1.875rem] max-[767px]:h-[2.375rem] max-[767px]:mt-2.5 max-[767px]:ml-1 max-[767px]:mr-1">
-          <h1 class="flex">
+          <h1 class="flex ">
               EasyPathAI!
           </h1>
         </div>
         <div class="
             flex w-full justify-center">
           <p class="
-            flex drop-shadow-lg font-['Noto_Sans'] font-medium
+            flex drop-shadow-lg font-['Noto_Sans'] font-medium 
             max-[767px]:text-[10px] max-[767px]:mt-[25px]
             md:text-[36px] md:mt-[89px]">
             используй силу ИИ для подготовки к собеседованиям 
@@ -59,4 +59,17 @@ export default {
   </div>
 </template>
 <style scoped>
+@keyframes spin-pause {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+  
 </style>

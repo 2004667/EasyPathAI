@@ -13,7 +13,7 @@
                 <div class="w-full max-[767px]:flex max-[767px]:justify-center max-[767px]:items-center">
                     <img class="
                         md:w-[96px] md:h-[72px] md:mb-[15px]
-                        max-[767px]:w-[35px] max-[767px]:h-[36px] max-[767px]:mb-[10px]" 
+                        max-[767px]:w-[35px] max-[767px]:h-[36px] max-[767px]:mb-[10px] animate-pulse"  
                         src="/images/yellow_light_main.svg" alt="">
                 </div>
                 <h1 class="
@@ -33,7 +33,7 @@
         <div class="flex w-full max-[767px]:justify-center max-[767px]:">
             <button class="
                 flex justify-center items-center font-['Noto_Sans'] font-medium bg-[#2F2B2B] border-[#FFFFFF] rounded-sm border drop-shadow-lg text-[#FFFFFF] text-center
-                md:w-[176px] md:h-[42px] md:ml-[165px] 
+                md:w-[176px] md:h-[42px] md:ml-[165px] active:animate-ping-fixed 
                 max-[767px]:w-[85px] max-[767px]:h-[23px] max-[767px]:text-[9px]
                 ">
                 Start AI Chat
@@ -43,4 +43,57 @@
       </div>
 </template>
 <style scoped>
+ .wave {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background: "/public/images/wave.svg" ;
+        background-size: 200% 100%;
+        top: 100%;
+        left: 0;
+        animation: wave 2s linear infinite;
+        transition: 0.5s;
+      }
+      @keyframes wave {
+        from {
+          background-position-x: 0;
+        }
+        to {
+          background-position-x: 200%;
+        }
+      }
+      button:hover .wave {
+        top: 50%;
+      }
+      button:hover {
+        box-shadow: 6px 6px 0 black;
+      }
+  @media (max-width: 767px) {
+    button {
+        width: 120px;
+        height: 40px;
+        border: 0.5mm solid black;
+        border-radius: 5mm;
+        box-shadow: 3px 3px 0 black;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+  }
+    @media (min-width: 768px) {
+     button {
+        width: 200px;
+        height: 60px;
+        border: 0.5mm solid black;
+        border-radius: 5mm;
+        box-shadow: 3px 3px 0 black;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+    }
 </style>

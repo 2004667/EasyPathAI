@@ -25,6 +25,12 @@ export default {
       this.logout()
       this.$router.push('/')
     },
+    toQuestion(){
+      this.$router.push('/prof')
+    },
+    toLand(){
+      this.$router.push('/land')
+    },
     changeImage() {
       
       if (this.settingsImage === '/images/settings.svg') {
@@ -59,7 +65,7 @@ export default {
         md:w-[1446px] md:h-[96px] md:mt-[3px]
         max-[767px]:w-full max-[767px]:
         flex drop-shadow-lg bg-[#2F2B2B] text-[#FFFFFF]" id="header">
-       <div class="
+       <div @click="toLand" class="
             md:h-[96px] md:w-[390px] md:ml-[55px] 
             max-[767px]:w-[390px] max-[767px]:h-[62px]
             flex  items-center"> 
@@ -113,7 +119,7 @@ export default {
       <div class="
         flex space-x-[60px] items-center
         md:ml-[106px]">
-         <h1>Программы вопросов </h1>
+         <h1 @click="toQuestion">Программы вопросов </h1>
          <h1>Собеседования</h1>
          <h1>Найти ментора</h1>
       </div>
@@ -133,7 +139,7 @@ export default {
       <img src="/images/search.svg" alt="" class="absolute right-1 top-1/2 transform -translate-y-1/2 w-[34px] h-[30px]" />
     </div>
     <div class="w-full flex flex-col items-center mt-[50px] space-y-4 mr-[60px]" >
-      <div class="flex items-center space-x-3">
+      <div @click="toQuestion" class="flex items-center space-x-3">
         <img src="/images/comp.svg" alt="" width="44px" height="25px" />
         <h1 class="text-[22px] text-[#ffffff]">Программы вопросов</h1>
       </div>

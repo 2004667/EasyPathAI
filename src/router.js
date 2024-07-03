@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Landing from './Landing.vue';
+import ProfessionMain from './ProffessionMain.vue';
 import Welcome from './components/WelcomePage.vue';
-import store from './store'; // убедитесь, что путь к store правильный
+import store from './store';
 
 const routes = [
     {
@@ -18,6 +19,10 @@ const routes = [
     {
         path: '/',
         component: Welcome
+    },
+    {
+        path: '/prof',
+        component: ProfessionMain
     }
 ];
 
