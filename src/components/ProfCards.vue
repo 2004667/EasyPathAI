@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-center w-full max-[767px]:mt-[80px]">
+  <div class="flex flex-wrap justify-center w-full max-[767px]:mt-[80px]  md:mt-[50px]">
     <ProfessionCard
       v-for="(profession, index) in professions"
       :key="index"
