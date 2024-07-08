@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import Landing from './Landing.vue';
 import ProfessionMain from './ProffessionMain.vue';
 import Welcome from './components/WelcomePage.vue';
+import ProfessionDetail from './components/ProfessionDetail.vue';
 import store from './store';
 
 const routes = [
@@ -23,6 +24,10 @@ const routes = [
     {
         path: '/prof',
         component: ProfessionMain
+    },
+    {
+        path: '/profDetails',
+        component: ProfessionDetail
     }
 ];
 

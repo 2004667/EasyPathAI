@@ -57,7 +57,11 @@ export default {
       this.isClicked = true;
       setTimeout(() => {
         this.isClicked = false;
-      }, 1000); // Сбросить состояние после 1 секунды (опционально)
+      }, 1000);
+      setTimeout(() => {
+        this.$router.push('/profDetails')
+      }, 1300);
+
     },
   },
 };
