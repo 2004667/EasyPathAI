@@ -1,52 +1,43 @@
 <template>
-    <div class="bg-[#FBFBFB] md:w-1/6 md:h-4/12 drop-shadow-lg rounded-[5px] ml-5 max-[767px]:w-3/6 max-[767px]:ml-[25%]">
-        <div class="flex pt-5 flex-wrap justify-center">
-            <button
-                v-for="(tag, index) in proftags"
-                :key="index"
-                class="border-[1px] ml-[5px] mr-[5px] mb-[5px] border-[#9A9494] w-5/12 h-8/12 bg-[#FBFBFB] rounded-[5px] drop-shadow-lg flex justify-center items-center"
-            >
-                <h1>{{ tag.name }}</h1>
-            </button>
+    <div class=" flex justify-center items-center flex-wrap md:w-8/12 space-x-4 border rounded md:min-h-[90px] bg-[#FCFCFC]">
+        <div class="w-full flex items-center justify-center space-x-1">
+            <h1 class="text-[#B1ABAB] text-[19px] font-bold text-center">Фильтры</h1>
+            <img class="w-[15px] mt-[6px]" src="/images/filter.svg" alt="">
         </div>
+        <OneTag class="bg-[#F0EFEF] rounded-lg min-w-[100px] h-[30px]" v-for="(proftag,index) in proftags" :key="index" :name="proftag.name" />
     </div>
 </template>
 
 <style scoped>
-@media (max-width: 767px) {
-    h1 {
-        font-size: 10px;
-    }
-    button {
-        height: 34px;
-    }
-}
-@media (min-width: 768px) {
-    button {
-        height: 40px;
-    }
-    h1 {
-        font-size: 13px;
-        font-weight: 600;
-    }
-}
-button:hover {
-    background-color: #e96852;
-    color: white;
-}
-button:active {
-    background-color: #e96852;
-    color: white;
-}
+
 </style>
 
 <script>
+import OneTag from "./OneTag.vue"
 export default {
+    components: {
+        OneTag,
+    },
     props: {
         proftags: Array,
     },
     data() {
-        return {};
+        return {
+            IsClicked: false,
+        };
     },
+    computed: {
+        buttonBackground() {
+            return this.localIsLiked ? '#FE5555' : '#F6F4F4';
+        },
+    },
+    methods: {
+        toggleLike() {
+            this.localIsLiked = !this.localIsLiked;
+            this.localLikeQuantity += this.localIsLiked ? 1 : -1;
+            this.$emit('update:isLiked', this.localIsLiked);
+            this.$emit('update:likeQuantity', this.localLikeQuantity);
+        },
+    }
 };
 </script>

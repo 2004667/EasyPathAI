@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex md:w-10/12 bg-[#FCFCFC] border border-[#E2E1E1] md:mb-[5px] rounded-md md:h-[50px] max-[767px]:min-h-[55px] mt-[20px] items-center max-[767px]:w-11/12 drop-shadow-lg">
+  <div class="flex md:w-8/12 bg-[#FCFCFC] border border-[#E2E1E1] md:mb-[5px] rounded-md md:h-[50px] max-[767px]:min-h-[55px] mt-[20px] items-center max-[767px]:w-11/12 drop-shadow-lg">
     <div class="flex w-1/5 justify-start ml-[5px]">
         <img class="md:h-[30px] max-[767px]:w-[25px]" src="/images/fire.svg" alt="">
     </div>
