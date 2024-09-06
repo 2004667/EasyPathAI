@@ -29,6 +29,10 @@ export default {
         { name: 'ILKAGAY' },
         { name: 'ILKAGAY' },
         { name: 'ILKAGAY' },
+        { name: 'ILKAGAY' },
+        { name: 'ILKAGAY' },
+        { name: 'ILKAGAY' },
+        { name: 'ILKAGAY' },
       ],
     };
   },
