@@ -14,6 +14,12 @@ export default {
         { name: 'DevOps инженер', image: '/images/dev-ops.svg' },
         { name: 'Machine learning', image: '/images/machine_learning.svg' },
         { name: 'IOS разработчик', image: '/images/ios_dev.svg' },
+        { name: 'Flutter разработчик', image: '/images/flutter.svg' },
+        { name: 'QA инженер', image: '/images/testing.svg' },
+        { name: 'Golang разработчик', image: '/images/go.svg' },
+        { name: 'PHP разработчик', image: '/images/php.svg' },
+        { name: 'Java разработчик', image: '/images/java.svg' },
+        { name: 'Node.js разработчик', image: '/images/node-js.svg' },
       ],
     };
   },
@@ -21,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-center w-full max-[767px]:mt-[80px]  md:mt-[50px]">
+  <div class="flex flex-wrap justify-center w-full max-[767px]:mt-[80px]  md:mt-[30px] p-[3%]">
     <ProfessionCard
       v-for="(profession, index) in professions"
       :key="index"

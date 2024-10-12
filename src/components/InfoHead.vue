@@ -3,14 +3,15 @@ import { mapGetters } from 'vuex'
 import LogOut from './LogOut.vue';
 import { googleLogout } from 'vue3-google-login'
 import { mapActions } from 'vuex'
+
 export default {
   components: {
     LogOut,
   },
   data() {
     return {
-      settingsImage: '/images/settings.svg', 
-      mobilediv : false,
+      settingsImage: '/images/settings.svg',
+      mobilediv: false,
       showLogOut: false,
     };
   },
@@ -19,28 +20,29 @@ export default {
   },
   methods: {
     ...mapActions(['logout']),
-    logOut(){
-      console.log('hai')
-      googleLogout()
-      this.logout()
-      this.$router.push('/')
+    logOut() {
+      googleLogout();
+      this.logout();
+      this.$router.push('/');
     },
-    toQuestion(){
-      this.$router.push('/prof')
+    toQuestion() {
+      this.$router.push('/prof');
     },
-    toLand(){
-      this.$router.push('/land')
+    toLand() {
+      if (this.$route.path === '/land') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        this.$router.push('/land');
+      }
     },
     changeImage() {
-      
       if (this.settingsImage === '/images/settings.svg') {
-        this.settingsImage = '/images/Close.svg'; 
+        this.settingsImage = '/images/Close.svg';
         this.mobilediv = true;
       } else {
-        this.settingsImage = '/images/settings.svg'; 
-         this.mobilediv = false;
+        this.settingsImage = '/images/settings.svg';
+        this.mobilediv = false;
       }
-
     },
     toggleLogOut() {
       this.showLogOut = !this.showLogOut;
@@ -50,7 +52,35 @@ export default {
         this.showLogOut = false;
       }
     },
-  }, mounted() {
+    infotrig() {
+      this.navigateAndScrollTo('info', 100);
+    },
+    aitrig() {
+      this.navigateAndScrollTo('ai', 700);
+    },
+    reqtrig() {
+      this.navigateAndScrollTo('requests', 2000);
+    },
+    contrig() {
+      this.navigateAndScrollTo('contacts', 2400);
+    },
+    navigateAndScrollTo(section, scrollPosition) {
+      if (this.$route.path === '/land') {
+        // Если уже на лендинге — просто скроллим
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      } else {
+        // Если не на лендинге — переходим на лендинг с нужной секцией
+        this.$router.push({ path: '/land', query: { section } });
+        // После навигации добавляем скролл с задержкой
+        this.$nextTick(() => {
+          setTimeout(() => {
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+          }, 300);  // Задержка для завершения навигации
+        });
+      }
+    }
+  },
+  mounted() {
     document.addEventListener('click', this.handleClickOutside);
   },
   beforeUnmount() {
@@ -58,6 +88,7 @@ export default {
   },
 };
 </script>
+
 <template>
    <div class="
      flex justify-center flex-wrap font-['Noto_Sans'] ">
@@ -87,16 +118,16 @@ export default {
            text-[22px] flex space-x-9 items-center  
 
            max-[767px]:hidden"> 
-           <h1>
+           <h1 @click="infotrig">
              Информация 
            </h1>
-           <h1>
+           <h1 @click="aitrig">
              AI ассистент
            </h1>
-           <h1>
+           <h1 @click="reqtrig">
              Заявки
            </h1>
-           <h1>
+           <h1 @click="contrig">
              Контакты 
            </h1>
        </div>
@@ -125,7 +156,7 @@ export default {
       </div>
         <div class="relative w-[172px] h-[28px] ml-[380px] mt-[12px]">
           <input class="
-                 border-2 border-[#9A9494] w-full h-full rounded-[15px] pl-[10px] pr-[30px] placeholder-margin" placeholder="Поиск...">
+                 border-2 border-[#9A9494] w-full h-full rounded-[15px] pl-[15px] pr-[30px]  text-[18px]" placeholder="Поиск...">
           
           <img src="/images/search.svg" alt="" class="
                 h-[19px] w-[19px] absolute right-2 top-4 transform -translate-y-1/2 " id="search">
@@ -135,7 +166,7 @@ export default {
   <div v-if="mobilediv" class="w-full h-[800px] bg-[#2F2B2B] flex justify-center flex-wrap md:hidden " id="mob">
    <div class="w-full flex flex-col items-center mt-[20px]">
     <div class="relative w-[348px]">
-      <input class="bg-[#FFFFFF] w-full h-[50px] rounded-[5px] pl-[10px] pr-[40px] placeholder-gray-500" placeholder="Поиск..." />
+      <input class="bg-[#FFFFFF] w-full h-[50px] rounded-[5px] pl-[10px] pr-[40px] placeholder-gray-500 text-[20px]" placeholder="Поиск..." />
       <img src="/images/search.svg" alt="" class="absolute right-1 top-1/2 transform -translate-y-1/2 w-[34px] h-[30px]" />
     </div>
     <div class="w-full flex flex-col items-center mt-[50px] space-y-4 mr-[60px]" >

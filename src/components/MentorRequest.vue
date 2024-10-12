@@ -19,12 +19,12 @@
                 md:w-full md:space-x-6 
                 ">
                 <input class="
-                    rounded-lg placeholder:pl-4 drop-shadow-lg
+                    rounded-lg  drop-shadow-lg pl-4
                     md:w-1/4 md:h-[45px] 
                     max-[767px]:w-9/12 max-[767px]:h-[40px] max-[767px]:mb-4"
                     placeholder="Имя">
                 <input class="
-                    rounded-lg placeholder:pl-4 drop-shadow-lg
+                    rounded-lg pl-4 drop-shadow-lg
                     md:w-1/4 md:h-[45px] 
                     max-[767px]:w-9/12 max-[767px]:h-[40px] max-[767px]:mb-4"
                     placeholder="E-mail">

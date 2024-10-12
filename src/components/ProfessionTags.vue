@@ -10,7 +10,7 @@
         class="rounded-full bg-[#F0EFEF] w-[30px] h-[30px] flex items-center justify-center"
         @click="prevPage"
       >
-        <span>&#8592;</span>
+        <span class="mb-[5px]">&#8592;</span>
       </button>
 
       <!-- Tags Container with dynamic class for animation -->
@@ -32,7 +32,7 @@
         class="rounded-full bg-[#F0EFEF] w-[30px] h-[30px] flex items-center justify-center"
         @click="nextPage"
       >
-        <span>&#8594;</span>
+        <span class="mb-[5px]">&#8594;</span>
       </button>
     </div>
   </div>

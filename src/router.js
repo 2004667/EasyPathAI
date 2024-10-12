@@ -3,6 +3,7 @@ import Landing from './Landing.vue';
 import ProfessionMain from './ProffessionMain.vue';
 import Welcome from './components/WelcomePage.vue';
 import ProfessionDetail from './components/ProfessionDetail.vue';
+import InfoMain from './components/InfoMain.vue'
 import store from './store';
 
 const routes = [
@@ -28,6 +29,10 @@ const routes = [
     {
         path: '/profDetails',
         component: ProfessionDetail
+    },
+    {
+        path: '/land',
+        component: InfoMain
     }
 ];
 
