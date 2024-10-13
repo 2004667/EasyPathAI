@@ -34,6 +34,18 @@ export default {
         { name: 'TYPESCRIPT' },
         { name: 'DOCKER' },
       ],
+      question_content: [
+        {text:'Мне понравилось что сразу можно увидеть результат твоих действий'},
+        {text:''},
+        {text:'Promise (обещание) — это объект, представляющий завершение (или неудачу) асинхронной операции и её результат.'+
+        ' Он позволяет ассоциировать обработчики с асинхронным действием, тем самым избавляя от необходимости использовать '+
+        'обратные вызовы (callback-функции). Они упрощают работу с асинхронными операциями, такими как AJAX-запросы или '+
+        'чтение файлов, позволяя написать код, который проще понять и поддерживать.'},
+        {text:''},
+        {text:''},
+        {text:''},
+        {text:''},
+      ]
     };
   },
 }
@@ -41,10 +53,10 @@ export default {
 
 <template>
   <InfoHead/>
-  <div class="flex flex-wrap mt-[50px] md:space-x-7 mb-[100px]">
+  <div class="flex flex-wrap mt-[50px] md:space-x-7 mb-[100px] ">
     <div class=" rounded-lg drop-shadow-lg flex justify-center flex-wrap space-y-6">
         <h1 class="font-['Noto_Sans'] font-medium md:text-[28px] text-center max-[767px]:text-[18px] md:w-full">Вопросы с собеседовании на Frontend разработчика</h1>
-        <div class="md:w-full flex justify-center">
+        <div class="md:w-full flex justify-center ">
           <ProfessionTags class="" :proftags="proftags"/>
         </div>
         <ProfQuestion class="" v-for="(question, index) in questions"
@@ -54,6 +66,7 @@ export default {
         :tags="question.tags"
         :isLiked="question.isLiked"
         :isPined="question.isPined"
+        :text="question_content[index]?.text || ''"
         />
         
     </div>
