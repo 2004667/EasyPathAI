@@ -4,32 +4,23 @@
     </button>
 </template>
 
-<style scoped>
-
-</style>
-
 <script>
 export default {
     props: {
         name: String,
-    },
-    data() {
-        return {
-            IsClicked: false,
-        };
+        isClicked: Boolean,
     },
     computed: {
         buttonBackground() {
-            return this.IsClicked ? '#E96852' : '#F0EFEF';
+            return this.isClicked ? '#E96852' : '#F0EFEF';
         },
         buttonTextColor() {
-            return this.IsClicked ? '#FFFFFF' : '#000000';
+            return this.isClicked ? '#FFFFFF' : '#000000';
         },
     },
     methods: {
         toggleClick() {
-            this.IsClicked = !this.IsClicked;
-            this.$emit('update:IsClicked', this.IsClicked);
+            this.$emit('update:IsClicked', !this.isClicked);
         },
     }
 };

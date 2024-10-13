@@ -5,17 +5,15 @@
       <img class="w-[15px] mt-[6px]" src="/images/filter.svg" alt="">
     </div>
     <div class="flex overflow-hidden w-[90%] relative justify-center items-center space-x-6" style="height: 100px;">
-      <!-- Left Arrow Button -->
       <button
-        class="rounded-full bg-[#F0EFEF] w-[30px] h-[30px] flex items-center justify-center"
+        class="rounded-full bg-[#F0EFEF] w-[30px] h-[30px] justify-center"
         @click="prevPage"
       >
         <span class="mb-[5px]">&#8592;</span>
       </button>
 
-      <!-- Tags Container with dynamic class for animation -->
       <div
-        class="flex justify-center md:space-x-[10px] max-[767px]:space-x-4  max-[767px]:flex-wrap md:w-8/12 tag-container"
+        class="flex justify-center md:space-x-[10px] max-[767px]:space-x-4 max-[767px]:flex-wrap md:w-8/12 tag-container"
         :class="{ 'animate-tags': isAnimationActive }"
         @animationend="handleAnimationEnd"
       >
@@ -23,13 +21,14 @@
           v-for="(proftag, index) in visibleTags"
           :key="index"
           :name="proftag.name"
+          :isClicked="clickedTags[index + currentIndex * itemsPerPage]"
+          @update:IsClicked="updateClickedTag(index + currentIndex * itemsPerPage, $event)"
           class="bg-[#F0EFEF] rounded-lg md:min-w-[100px] h-[30px] max-[767px]:h-[25px] max-[767px]:min-w-[90px]"
         />
       </div>
 
-      <!-- Right Arrow Button -->
       <button
-        class="rounded-full bg-[#F0EFEF] w-[30px] h-[30px] flex items-center justify-center"
+        class="rounded-full bg-[#F0EFEF] w-[30px] h-[30px] justify-center"
         @click="nextPage"
       >
         <span class="mb-[5px]">&#8594;</span>
@@ -37,30 +36,6 @@
     </div>
   </div>
 </template>
-
-
-<style scoped>
-/* Define the animation styles */
-@keyframes pulse {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Class for triggering animation */
-.animate-tags {
-  animation: pulse 2s ease-out;
-}
-
-/* Ensure the animation only applies when the class is added */
-.tag-container {
-  transition: opacity 0.5s;
-}
-</style>
-
 
 <script>
 import OneTag from "./OneTag.vue";
@@ -75,8 +50,9 @@ export default {
   data() {
     return {
       currentIndex: 0,
-      itemsPerPage: 3,
+      itemsPerPage: this.getItemsPerPage(), // Инициализация
       isAnimationActive: false,
+      clickedTags: Array(this.proftags.length).fill(false),
     };
   },
   computed: {
@@ -111,6 +87,32 @@ export default {
     handleAnimationEnd() {
       this.isAnimationActive = false;
     },
+    updateClickedTag(index, value) {
+      this.clickedTags[index] = value;
+    },
+    getItemsPerPage() {
+      return window.innerWidth <= 767 ? 2 : 3; // 2 для телефонов, 3 для остальных разрешений
+    },
+    handleResize() {
+      const newItemsPerPage = this.getItemsPerPage();
+      // Обновляем только если изменилось количество элементов на странице
+      if (newItemsPerPage !== this.itemsPerPage) {
+        this.itemsPerPage = newItemsPerPage;
+        // Обновляем currentIndex, чтобы не выходить за границы
+        this.currentIndex = Math.min(this.currentIndex, Math.ceil(this.proftags.length / this.itemsPerPage) - 1);
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleResize); // Добавляем обработчик события
+    this.handleResize(); // Проверяем размер окна при монтировании
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize); // Удаляем обработчик события
   },
 };
 </script>
+
+<style scoped>
+/* Добавьте стили при необходимости */
+</style>
