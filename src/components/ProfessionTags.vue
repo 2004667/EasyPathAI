@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       currentIndex: 0,
-      itemsPerPage: this.getItemsPerPage(), // Инициализация
+      itemsPerPage: this.getItemsPerPage(),
       isAnimationActive: false,
       clickedTags: Array(this.proftags.length).fill(false),
     };
@@ -89,26 +89,28 @@ export default {
     },
     updateClickedTag(index, value) {
       this.clickedTags[index] = value;
+      const selectedTags = this.proftags
+        .filter((_, idx) => this.clickedTags[idx])
+        .map(tag => tag.name);
+      this.$emit('filter-tags', selectedTags);
     },
     getItemsPerPage() {
-      return window.innerWidth <= 767 ? 2 : 3; // 2 для телефонов, 3 для остальных разрешений
+      return window.innerWidth <= 767 ? 2 : 3;
     },
     handleResize() {
       const newItemsPerPage = this.getItemsPerPage();
-      // Обновляем только если изменилось количество элементов на странице
       if (newItemsPerPage !== this.itemsPerPage) {
         this.itemsPerPage = newItemsPerPage;
-        // Обновляем currentIndex, чтобы не выходить за границы
         this.currentIndex = Math.min(this.currentIndex, Math.ceil(this.proftags.length / this.itemsPerPage) - 1);
       }
     },
   },
   mounted() {
-    window.addEventListener('resize', this.handleResize); // Добавляем обработчик события
-    this.handleResize(); // Проверяем размер окна при монтировании
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
   },
   beforeDestroy() {
-    window.removeEventListener('resize', this.handleResize); // Удаляем обработчик события
+    window.removeEventListener('resize', this.handleResize);
   },
 };
 </script>
