@@ -4,6 +4,7 @@ import ProfessionMain from './ProffessionMain.vue';
 import Welcome from './components/WelcomePage.vue';
 import ProfessionDetail from './components/ProfessionDetail.vue';
 import InfoMain from './components/InfoMain.vue'
+import AIChat from './components/AIChat.vue'
 import store from './store';
 
 const routes = [
@@ -33,7 +34,11 @@ const routes = [
     {
         path: '/land',
         component: InfoMain
-    }
+    },
+    {
+        path: '/aichat',
+        component: AIChat
+    }    
 ];
 
 const router = createRouter({

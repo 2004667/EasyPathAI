@@ -59,7 +59,7 @@ export default {
 </script>
 
 <template>
-  <div :class="['flex flex-col md:w-8/12 max-[767px]:w-full bg-[#FCFCFC] border border-[#000000] rounded-md mt-[10px] drop-shadow-lg transition-all duration-300', 
+  <div :class="['flex flex-col md:w-12/12 max-[767px]:w-full bg-[#FCFCFC] border border-[#000000] rounded-md mt-[10px] drop-shadow-lg transition-all duration-300', 
                 isOpen ? 'md:h-auto max-[767px]:h-auto' : 'md:h-[50px] max-[767px]:h-[45px]'] ">
     
     <div class="flex items-center w-full">

@@ -10,7 +10,7 @@ export default {
       professions: [
         { name: 'Frontend разработчик', image: '/images/frontend_devloper.svg' },
         { name: 'Backend разработчик', image: '/images/backend_devloper.svg' },
-        { name: 'Data-Science инженер', image: '/images/data_analyst.svg' },
+        { name: 'Data-Аналитик', image: '/images/data_analyst.svg' },
         { name: 'DevOps инженер', image: '/images/dev-ops.svg' },
         { name: 'Machine learning', image: '/images/machine_learning.svg' },
         { name: 'IOS разработчик', image: '/images/ios_dev.svg' },

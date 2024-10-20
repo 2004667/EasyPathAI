@@ -1,14 +1,20 @@
-<template>
-  <InfoHead/>
+<template > 
+ <div class="h-screen">
+  <InfoHead />
   <div class="flex flex-wrap mt-[50px] md:space-x-7 mb-[100px] ">
-    <div class="rounded-lg drop-shadow-lg flex justify-center flex-wrap space-y-6">
+    <div class="rounded-lg drop-shadow-lg flex justify-center flex-wrap space-y-6 md:w-full"> 
       <h1 class="font-['Noto_Sans'] font-medium md:text-[28px] text-center max-[767px]:text-[18px] md:w-full">
         Вопросы с собеседовании на Frontend разработчика
       </h1>
       <div class="md:w-full flex justify-center">
         <ProfessionTags :proftags="proftags" @filter-tags="filterQuestions" />
+      </div >
+
+      <div v-if="filteredQuestions.length === 0" class="flex justify-center items-center">
+        <p class="text-center text-gray-600">Нет вопросов для выбранных тегов.</p>
       </div>
-      <ProfQuestion
+      <div v-else class="md:w-8/12">
+       <ProfQuestion
         v-for="(question, index) in filteredQuestions"
         :key="index"
         :quest="question.quest"
@@ -17,9 +23,12 @@
         :isLiked="question.isLiked"
         :isPined="question.isPined"
         :text="question_content[index]?.text || ''"
-      />
+        class="w-[100%]"
+       />
+      </div> 
     </div>
   </div>
+ </div>
 </template>
 
 <script>
@@ -82,7 +91,15 @@ export default {
   },
 };
 </script>
-
 <style scoped>
-/* Добавьте стили при необходимости */
+body{
+  object-fit: cover;
+}
+.full-screen-bg {
+  background-color: #F0F0F0; /* Replace with your desired background color */
+  height: 100vh; /* Ensure this container takes full height */
+  display: flex; /* To center contents vertically */
+  flex-direction: column; /* Stack children vertically */
+}
 </style>
+

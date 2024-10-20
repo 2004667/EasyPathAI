@@ -1,5 +1,10 @@
 <script>
-
+import AIChat from "./AIChat.vue";
+export default {
+    components:{
+      AIChat
+    }
+}
 </script>
 <template>
       <div class="
@@ -31,6 +36,7 @@
             </h1>
         </div>
         <div class="flex w-full max-[767px]:justify-center max-[767px]:">
+          <router-link to="/aichat">
             <button class="
                 flex justify-center items-center font-['Noto_Sans'] font-medium bg-[#2F2B2B] border-[#FFFFFF] rounded-sm border drop-shadow-lg text-[#FFFFFF] text-center
                 md:w-[176px] md:h-[42px] md:ml-[165px] active:animate-ping-fixed 
@@ -39,6 +45,7 @@
                 Start AI Chat
                 <img class="md:w-[14px] md:h-[10px] md:ml-[10px] max-[767px]:w-[5px] max-[767px]:ml-[5px]" src="/images/arrow.svg" alt="">
             </button>
+          </router-link>
         </div>
       </div>
 </template>
