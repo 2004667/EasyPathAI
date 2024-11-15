@@ -6,6 +6,7 @@ import ProfessionDetail from './components/ProfessionDetail.vue';
 import InfoMain from './components/InfoMain.vue'
 import AIChat from './components/AIChat.vue'
 import store from './store';
+import Mentors from './components/Mentors.vue';
 
 const routes = [
     {
@@ -38,7 +39,12 @@ const routes = [
     {
         path: '/aichat',
         component: AIChat
-    }    
+    },
+    {
+        path: '/mentors',
+        component: Mentors
+    },
+        
 ];
 
 const router = createRouter({

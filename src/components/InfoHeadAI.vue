@@ -28,9 +28,6 @@ export default {
     toQuestion() {
       this.$router.push('/prof');
     },
-    toMentors() {
-      this.$router.push('/mentors');
-    },
     toLand() {
       if (this.$route.path === '/land') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -154,8 +151,8 @@ export default {
         flex space-x-[60px] items-center
         md:ml-[106px]">
          <h1 @click="toQuestion">Программы вопросов </h1>
-         <h1 >Собеседования</h1>
-         <h1 @click="toMentors">Найти ментора</h1>
+         <h1>Собеседования</h1>
+         <h1>Найти ментора</h1>
       </div>
         <div class="relative w-[172px] h-[28px] ml-[380px] mt-[12px]">
           <input class="
@@ -168,24 +165,21 @@ export default {
    </div>
   <div v-if="mobilediv" class="w-full h-[800px] bg-[#2F2B2B] flex justify-center flex-wrap md:hidden " id="mob">
    <div class="w-full flex flex-col items-center mt-[20px]">
-    <div class="relative w-[348px]">
-      <input class="bg-[#FFFFFF] w-full h-[50px] rounded-[5px] pl-[10px] pr-[40px] placeholder-gray-500 text-[20px]" placeholder="Поиск..." />
-      <img src="/images/search.svg" alt="" class="absolute right-1 top-1/2 transform -translate-y-1/2 w-[34px] h-[30px]" />
-    </div>
-    <div class="w-full flex flex-col items-center mt-[50px] space-y-4 mr-[60px]" >
-      <div @click="toQuestion" class="flex items-center space-x-3">
-        <img src="/images/comp.svg" alt="" width="44px" height="25px" />
-        <h1 class="text-[22px] text-[#ffffff]">Программы вопросов</h1>
-      </div>
-      <div class="flex items-center space-x-3 justify-start mr-[70px]">
-        <img src="/images/talk.svg" alt="" width="44px" height="29px"/>
-        <h1 class="text-[22px] text-[#ffffff] flex ">Собеседования</h1>
-      </div>
-      <div class="flex items-center space-x-1  justify-start mr-[80px]">
-        <img src="/images/anketa.svg" alt="" width="59px" height="32px"/>
-        <h1 class="text-[22px] text-[#ffffff] flex ">Найти ментора</h1>
-      </div>
-    </div>
+   <div @click="newChat" class="w-[90%] border-[#808080] border-[1px] h-[45px] flex items-center rounded-md mt-[5%] space-x-[3%] cursor-pointer">
+          <p class="text-[#808080] ml-[5%]">+</p>
+          <p class="text-[#808080]">New chat</p>
+   </div>
+   <div class="flex flex-col justify-center items-center">
+        <div v-for="(message, index) in messageHistory" :key="index" class="w-[90%] border-[#808080] border-[1px] h-[45px] flex rounded-md justify-evenly items-center mb-[10px]"> <!-- Added mb-[10px] for spacing -->
+          <img src="/images/message.svg" alt="">
+          <div class="flex items-center">
+            <p class="text-[#808080]">{{ truncateMessage(message.text) }}</p>
+          </div>
+          <div class="flex space-x-[15%]">
+            <img @click="removeMessage(index)" src="/images/delete.svg" alt="" width="15px">
+          </div>
+        </div>
+    </div> 
     <div class="bg-[#FFFFFF] w-[348px] h-[49px] mt-[200px] flex items-center rounded-[5px]">
           <template v-if="user">
             <img :src="user.picture" alt="" width="40px" height="40px" class="ml-[23px] rounded-full">
@@ -208,5 +202,4 @@ h1{
 .placeholder-margin::placeholder {
   padding-left: 20px; /* Adjust this value to set the desired left padding */
 }
-
-</style> 
+</style>    
