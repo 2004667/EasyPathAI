@@ -10,13 +10,12 @@
           @remove-message="removeSavedMessage"
         />
       </div>
-
       <div class="md:h-screen md:flex md:flex-col md:justify-between md:items-center max-[767px]:flex max-[767px]:flex-col max-[767px]:items-center max-[767px]:w-full">
         <div v-if="chatHistory.length === 0" class="flex flex-col items-center md:mt-[10%] md:ml-[55%] max-[767px]:ml-0 max-[767px]:mt-0 max-[767px]:w-[80%]">
           <h1 class="text-[#9A9494] text-[50px] font-[600] text-center">Chat with AI</h1>
           <img src="/images/robot-assistant 1.svg" alt="" width="80px" height="80px" class="mt-[3%]" />
           
-          <div class="flex justify-center w-full mt-[20px] mb-[20px]">
+          <div class="flex justify-center w-full mt-[20px] mb-[20px] aichat-container">
             <AIChatInput
               :userMessage="userMessage"
               @update:userMessage="userMessage = $event"
@@ -27,7 +26,6 @@
           <h1 class="text-center">AI ChatBot will answer your questions</h1>
         </div>
 
-        <!-- Chat messages box for ongoing conversation -->
         <div v-else class="chat-box p-[10px] mt-[20px] border-[1px] border-[#808080] rounded-md h-[75%] md:w-[600px] sm:w-[90%] bg-[#FFF] drop-shadow-lg flex flex-col">
           <div v-for="(message, index) in chatHistory" :key="index" class="m-[5px] flex">
             <div v-if="message.sender === 'Bot'" class="flex items-start">
@@ -48,7 +46,6 @@
       </div>
     </div>
 
-    <!-- Message input bar at the bottom for ongoing conversation -->
     <div class="fixed bottom-0 left-0 right-0 flex justify-center">
       <AIChatInput
         v-if="chatHistory.length > 0"
@@ -78,17 +75,32 @@ export default {
       savedMessages: JSON.parse(localStorage.getItem('savedMessages')) || [],
     };
   },
+  mounted() {
+    // If there's no existing chat history in localStorage, initialize with an empty array
+    if (!this.chatHistory || this.chatHistory.length === 0) {
+      this.chatHistory = [];
+      localStorage.setItem('chatHistory', JSON.stringify(this.chatHistory));
+    }
+  },
   methods: {
     sendMessage(message) {
       if (message.trim() !== '') {
+        // Add user message to chat history
         this.chatHistory.push({ sender: 'User', text: message });
+
+        // Save the updated chat history to localStorage
         localStorage.setItem('chatHistory', JSON.stringify(this.chatHistory));
 
+        // Simulate a bot response after a short delay
         setTimeout(() => {
-          this.chatHistory.push({ sender: 'Bot', text: 'Hello!' });
+          const botReply = 'Hello!'; // You can replace this with actual AI logic
+          this.chatHistory.push({ sender: 'Bot', text: botReply });
+
+          // Save the updated chat history after the bot reply
           localStorage.setItem('chatHistory', JSON.stringify(this.chatHistory));
         }, 1000);
 
+        // Clear the user message input after sending the message
         this.userMessage = '';
       }
     },
@@ -121,11 +133,10 @@ export default {
   overflow-x: hidden;
 }
 
-/* Responsive styles for smaller screens (max-width: 767px) */
 @media (max-width: 767px) {
   .chat-box {
     width: 100%;
-    max-width: 600px; /* Limit max width on small devices */
+    max-width: 600px; 
     height: 50%;
     padding: 10px;
     margin-top: 20%;
@@ -134,28 +145,27 @@ export default {
   .message-bubble {
     font-size: 14px;
     padding: 12px;
-    max-width: 200px; /* Limit max width of the message bubble */
-    width: auto; /* Allow the bubble to expand based on content length */
-    word-wrap: break-word; /* Allow long words to break */
-    white-space: normal; /* Ensure the text wraps inside the bubble */
+    max-width: 200px; 
+    width: auto; 
+    word-wrap: break-word; 
+    white-space: normal; 
     display: inline-block;
     line-height: 1.5;
     margin-bottom: 8px;
   }
 
-  /* Adjust text width inside the bubble */
   .message-bubble.bot-message,
   .message-bubble.user-message {
     padding: 10px;
-    width: auto; /* Allow the bubble to expand based on content length */
-    max-width: 200px; /* Set a max-width limit for the message bubble */
+    width: auto; 
+    max-width: 200px; 
   }
 
   .message-bubble.bot-message span,
   .message-bubble.user-message span {
     display: block;
-    width: auto; /* Allow text to adjust based on content length */
-    max-width: 180px; /* Limit text width to 180px */
+    width: auto; 
+    max-width: 180px; 
   }
 }
 
@@ -200,7 +210,7 @@ export default {
   color: white;
   border: 1px solid;
   border-radius: 15px;
-  padding: 8px 18px; /* Keep original padding */
+  padding: 8px 18px; 
   max-width: 75%;
   margin-left: auto;
   word-wrap: break-word;
@@ -213,13 +223,11 @@ export default {
   color: white;
   border: 1px solid;
   border-radius: 15px;
-  padding: 7px 18px; /* Keep original padding */
+  padding: 7px 18px;
   max-width: 75%;
   margin-right: auto;
   word-wrap: break-word;
   line-height: 1.5;
   margin-bottom: 8px;
 }
-
-
 </style>
