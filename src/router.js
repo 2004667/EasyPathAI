@@ -6,7 +6,7 @@ import ProfessionDetail from './components/ProfessionDetail.vue';
 import InfoMain from './components/InfoMain.vue'
 import AIChat from './components/AIChat.vue'
 import store from './store';
-import Mentors from './components/Mentors.vue';
+import Mentors from './components/Mentors/Mentors.vue';
 import Interview from './components/Interview.vue'
 
 const routes = [
