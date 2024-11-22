@@ -31,6 +31,9 @@ export default {
     toMentors() {
       this.$router.push('/mentors');
     },
+    toInterview() {
+      this.$router.push('/interview');
+    },
     toLand() {
       if (this.$route.path === '/land') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -154,7 +157,7 @@ export default {
         flex space-x-[60px] items-center
         md:ml-[106px]">
          <h1 @click="toQuestion">Программы вопросов </h1>
-         <h1 >Собеседования</h1>
+         <h1 @click="toInterview">Собеседования</h1>
          <h1 @click="toMentors">Найти ментора</h1>
       </div>
         <div class="relative w-[172px] h-[28px] ml-[380px] mt-[12px]">

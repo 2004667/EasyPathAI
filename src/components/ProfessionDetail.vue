@@ -49,7 +49,6 @@ export default {
         { quest: 'Какие типы данных существуют в javascript', likeQuantity: 8, tags: [{ name: 'HTML' }, { name: 'JAVASCRIPT' }], isLiked: false, isPined: false },
         { quest: 'Что такое promise и какие состояния у него есть', likeQuantity: 1, tags: [{ name: 'ILKAGAY' }, { name: 'JAVASCRIPT' }], isLiked: true, isPined: false },
         { quest: 'Чем let отличается от var', likeQuantity: 10, tags: [{ name: 'JAVASCRIPT' }], isLiked: false, isPined: false },
-        // Добавьте остальные вопросы
       ],
       proftags: [
         { name: 'HTML' },

@@ -7,6 +7,7 @@ import InfoMain from './components/InfoMain.vue'
 import AIChat from './components/AIChat.vue'
 import store from './store';
 import Mentors from './components/Mentors.vue';
+import Interview from './components/Interview.vue'
 
 const routes = [
     {
@@ -44,7 +45,11 @@ const routes = [
         path: '/mentors',
         component: Mentors
     },
-        
+    {
+        path: '/interview',
+        component: Interview
+    },
+      
 ];
 
 const router = createRouter({
