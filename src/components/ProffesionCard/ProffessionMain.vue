@@ -1,6 +1,6 @@
 <script>
-import InfoHead from './components/InfoHead.vue';
-import ProfCards from './components/ProfCards.vue';
+import InfoHead from '../Landing/InfoHead.vue'
+import ProfCards from './ProfCards.vue';
 export default {
   components:{
     InfoHead,

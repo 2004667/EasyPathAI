@@ -33,7 +33,7 @@
 
 <script>
 import ProfQuestion from './ProfQuestion.vue';
-import InfoHead from './InfoHead.vue';
+import InfoHead from '../Landing/InfoHead.vue';
 import ProfessionTags from './ProfessionTags.vue';
 
 export default {

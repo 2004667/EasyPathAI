@@ -9,7 +9,7 @@ export default{
 </script>
 
 <template>
-  <div class="bg-[#FBFBFB] md:bg-custom  max-[767px]:bg-mobile" >
+  <div class="bg-[#FBFBFB] md:bg-custom max-[767px]:bg-mobile" style="object-fit:cover">
     <router-view></router-view>
   </div>
   

@@ -59,7 +59,7 @@
 
 <script>
 import AIChatHistory from './AIChatHistory.vue';
-import InfoHeadAI from './InfoHeadAI.vue';
+import InfoHeadAI from '../Aichat/InfoHeadAI.vue';
 import AIChatInput from './AIChatInput.vue';
 
 export default {

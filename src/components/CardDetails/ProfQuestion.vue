@@ -65,7 +65,7 @@ export default {
     <div class="flex items-center w-full">
         <div class="flex w-1/5 justify-start ml-[10px] items-center" @click="toggleOpen">
             <img v-if="!isOpen" class="md:h-[30px] max-[767px]:w-[25px]" src="/images/plus.svg" alt="Plus Icon">
-            <img v-else class="md:h-[30px] max-[767px]:w-[25px]" src="/images/plusopen.svg" alt="Open Icon">
+            <img v-else class="md:h-[30px] max-[767px]:w-[25px]" src="/images/plusopen.svg" alt="Open Icon" >
         </div>
 
         <div class="flex justify-center flex-wrap w-full">

@@ -59,7 +59,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import LogOut from './LogOut.vue';
+import LogOut from '../Landing/LogOut.vue';
 import { googleLogout } from 'vue3-google-login';
 import { mapActions } from 'vuex';
 

@@ -3,7 +3,7 @@
     <MentorsList/>
 </template>
 <script>
-import InfoHead from '../InfoHead.vue';
+import InfoHead from '../Landing/InfoHead.vue';
 import MentorsList from "@/components/Mentors/MentorsList.vue";
 export default {
     components:{

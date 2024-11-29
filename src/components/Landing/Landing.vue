@@ -1,10 +1,10 @@
 <script>
-import InfoHead from './components/InfoHead.vue';
-import InfoMain from './components/InfoMain.vue';
-import InfoAIChat from './components/InfoAIChat.vue';
-import Instructions from './components/Instructions.vue'
-import MentorRequest from './components/MentorRequest.vue';
-import EasyFooter from './components/EasyFooter.vue'
+import InfoHead from './InfoHead.vue';
+import InfoMain from './InfoMain.vue';
+import InfoAIChat from '../Aichat/InfoAIChat.vue';
+import Instructions from './Instructions.vue'
+import MentorRequest from './MentorRequest.vue';
+import EasyFooter from './EasyFooter.vue'
 export default {
      name: 'Landing',
   components:{

@@ -1,14 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Landing from './Landing.vue';
-import ProfessionMain from './ProffessionMain.vue';
+import Landing from './components/Landing/Landing.vue';
+import ProfessionMain from './components/ProffesionCard/ProffessionMain.vue';
 import Welcome from './components/WelcomePage.vue';
-import ProfessionDetail from './components/ProfessionDetail.vue';
-import InfoMain from './components/InfoMain.vue'
-import AIChat from './components/AIChat.vue'
+import ProfessionDetail from './components/CardDetails/ProfessionDetail.vue';
+import InfoMain from './components/Landing/InfoMain.vue'
+import AIChat from './components/Aichat/AIChat.vue'
 import store from './store';
 import Mentors from './components/Mentors/Mentors.vue';
-import Interview from './components/Interview.vue'
-
+import Interview from './components/Interview/Interview.vue'
 const routes = [
     {
         path: '/land',
