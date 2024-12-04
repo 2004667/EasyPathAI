@@ -6,7 +6,7 @@
       <div class="flex items-center justify-between h-[55px]">
         <div class="flex items-center space-x-[30px]">
           <img src="/images/video-chat 1.svg" alt="" class="w-[38px] h-[36px]" />
-          <p class="max-[767px]:text-[13px] md:w-[500px] max-[767px]:w-[200px]">
+          <p class="max-[767px]:text-[10px] md:w-[500px] max-[767px]:w-[200px]">
             {{ name }}
           </p>
         </div>

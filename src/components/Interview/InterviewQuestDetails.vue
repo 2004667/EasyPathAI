@@ -40,7 +40,7 @@ export default {
         },
         {
           video_name:
-            "РЕАЛЬНОЕ СОБЕСЕДОВАНИЕ НА MIDDLE FRONTEND РАЗРАБОТЧИКА | JAVASCRIPT REACT #frontend #собеседование",
+            "Реальное Собеседование на Middle Frontend Разработчика | Javascript React #frontend #собеседование",
           profession: "Frontend",
           category: "Middle",
           video_link: "https://www.youtube.com/watch?v=vUm4I1jOjak",
@@ -68,6 +68,24 @@ export default {
           profession: "Devops Engineer",
           category: "Junior",
           video_link: "https://www.youtube.com/watch?v=8carjFjJMkc",
+        },
+        {
+          video_name: "Как стать Android-разработчиком с нуля? | Интервью с Senior Android-разработчиком",
+          profession: "Mobile",
+          category: "Senior",
+          video_link: "https://www.youtube.com/watch?v=HikOtMBT0do",
+        },
+        {
+          video_name: "Junior ML-инженер | Собеседование | karpov.courses",
+          profession: "Machine-Learning",
+          category: "Junior",
+          video_link: "https://www.youtube.com/watch?v=HTBLj6GRVHI",
+        },
+        {
+          video_name: "Собеседование на тестировщика. ТОП 20 вопросов на позицию QA. Собесы 2022. QA Interview",
+          profession: "QA Engineer",
+          category: "Middle",
+          video_link: "https://www.youtube.com/watch?v=dMdHRYfjzx0",
         },
       ],
     };

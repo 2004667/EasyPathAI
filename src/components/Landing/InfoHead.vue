@@ -99,7 +99,7 @@ export default {
    <div class="
      flex justify-center flex-wrap font-['Noto_Sans'] ">
     <div class="
-        md:w-[1446px] md:h-[96px] md:mt-[3px]
+        md:w-[94%] md:h-[96px] md:mt-[3px]
         max-[767px]:w-full max-[767px]:
         flex drop-shadow-lg bg-[#2F2B2B] text-[#FFFFFF]" id="header">
        <div @click="toLand" class="
@@ -138,7 +138,7 @@ export default {
            </h1>
        </div>
       <div ref="userInformation" class="
-           md:ml-[114px]  md:text-[15px] flex items-center
+           md:text-[15px] flex items-center w-[30%] justify-end
            max-[767px]:hidden"  @click.stop="toggleLogOut"> 
            <LogOut v-if="showLogOut" class="md:ml-[30px]"/>
            <template v-if="user">
@@ -151,7 +151,7 @@ export default {
     </div> 
     <div class="
         flex bg-[#FFFFFF]  drop-shadow-lg text-[#9A9494] text-[22px]  
-        md:w-[1446px] md:h-[51px] 
+        md:w-[94%] md:h-[51px] 
         max-[767px]:hidden">
       <div class="
         flex space-x-[60px] items-center

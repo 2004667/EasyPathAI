@@ -1,6 +1,8 @@
-<template>
+<template >
+ <div class="flex flex-col items-start h-[full] w-full bg-cover object-fit pb-[30px]">
+
   <InfoHead />
-  <div class="md:flex md:justify-start md:space-x-[5%]">
+  <div class="md:flex  md:space-x-[15%]">
     <InterviewFillter
       @filter-videos="updateFilters"
     />
@@ -9,6 +11,7 @@
       :selectedGrade="selectedGrade"
     />
   </div>
+ </div>
 </template>
 
 <script>
@@ -36,3 +39,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+</style>

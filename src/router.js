@@ -28,9 +28,15 @@ const routes = [
         path: '/prof',
         component: ProfessionMain
     },
+    // {
+    //     path: '/profDetails',
+    //     component: ProfessionDetail
+    // },
     {
-        path: '/profDetails',
-        component: ProfessionDetail
+        path: '/profession/:profession',
+        name: 'professionDetail',
+        component: () => import('./components/CardDetails/ProfessionDetail.vue'), // Если у тебя компонент в другой папке
+        props: true, // Это позволяет передавать параметры маршрута как props в компонент
     },
     {
         path: '/land',
