@@ -156,7 +156,7 @@ export const professionData = {
         { text: 'Continuous Deployment включает автоматическое развертывание на продакшен, а Continuous Delivery требует ручного подтверждения.' },
       ],
     },
-    'Machine Learning': {
+    'Machine learning': {
       questions: [
         { quest: 'Что такое машинное обучение и его основные типы?', likeQuantity: 50, tags: [{ name: 'ML BASICS' }, { name: 'TYPES' }], isLiked: true, isPined: false },
         { quest: 'Какие алгоритмы машинного обучения вы знаете?', likeQuantity: 35, tags: [{ name: 'ALGORITHMS' }], isLiked: false, isPined: true },
