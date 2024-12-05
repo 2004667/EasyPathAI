@@ -180,11 +180,11 @@ export default {
         <img src="/images/comp.svg" alt="" width="44px" height="25px" />
         <h1 class="text-[22px] text-[#ffffff]">Программы вопросов</h1>
       </div>
-      <div class="flex items-center space-x-3 justify-start mr-[70px]">
+      <div @click="toInterview" class="flex items-center space-x-3 justify-start mr-[70px]">
         <img src="/images/talk.svg" alt="" width="44px" height="29px"/>
         <h1 class="text-[22px] text-[#ffffff] flex ">Собеседования</h1>
       </div>
-      <div class="flex items-center space-x-1  justify-start mr-[80px]">
+      <div @click="toMentors" class="flex items-center space-x-1  justify-start mr-[80px]">
         <img src="/images/anketa.svg" alt="" width="59px" height="32px"/>
         <h1 class="text-[22px] text-[#ffffff] flex ">Найти ментора</h1>
       </div>
