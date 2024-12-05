@@ -1,5 +1,5 @@
 <template >
- <div class="flex flex-col items-start h-[full] w-full bg-cover object-fit pb-[30px]">
+ <div class="flex flex-col items-start w-full bg-cover object-fit pb-[30px]">
 
   <InfoHead />
   <div class="md:flex  md:space-x-[15%]">

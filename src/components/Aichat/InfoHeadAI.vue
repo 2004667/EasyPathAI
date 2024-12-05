@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center flex-wrap font-['Noto_Sans']">
     <!-- Header Section (Unchanged) -->
-    <div class="md:w-[1446px] md:h-[96px] md:mt-[3px] max-[767px]:w-full flex drop-shadow-lg bg-[#2F2B2B] text-[#FFFFFF]" id="header">
+    <div class="md:w-[94%] md:h-[96px] md:mt-[3px] max-[767px]:w-full flex drop-shadow-lg bg-[#2F2B2B] text-[#FFFFFF]" id="header">
       <div @click="toLand" class="md:h-[96px] md:w-[390px] md:ml-[55px] max-[767px]:w-[390px] max-[767px]:h-[62px] flex items-center">
         <img src="/images/Land_logo.svg" alt="" class="md:h-[52px] md:w-[32px] md:mt-[10px] max-[767px]:h-[29px] max-[767px]:w-[20px] max-[767px]:mt-[4px] max-[767px]:ml-[10px]" />
         <h1 class="text-[46px] flex items-center max-[767px]:text-[24px]">EasyPathAI</h1>

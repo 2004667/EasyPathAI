@@ -1,5 +1,5 @@
 <script>
-import AIChat from "./AIChat.vue";
+import AIChat from "../Aichat/AIChat.vue";
 export default {
     components:{
       AIChat
@@ -12,7 +12,7 @@ export default {
             w-full bg-[#2F2B2B] 
             md:h-[450px] md:mt-[220px] md:mb-[200px]
             max-[767px]:mt-[190px] max-[767px]:mb-[200px] max-[767px]:h-[400px] max-[767px]:items-center">
-        <div class="flex justify-center md:items-center flex-wrap">
+        <div class="flex max-[767px]:justify-center md:items-center max-[767px]:flex-wrap md:justify-between md:w-[80%]">
             <div class="
                     flex flex-wrap">
                 <div class="w-full max-[767px]:flex max-[767px]:justify-center max-[767px]:items-center">

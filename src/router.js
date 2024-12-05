@@ -8,6 +8,7 @@ import AIChat from './components/Aichat/AIChat.vue'
 import store from './store';
 import Mentors from './components/Mentors/Mentors.vue';
 import Interview from './components/Interview/Interview.vue'
+import MentorDetails from './components/Mentors/MentorDetails.vue'
 const routes = [
     {
         path: '/land',
@@ -28,10 +29,6 @@ const routes = [
         path: '/prof',
         component: ProfessionMain
     },
-    // {
-    //     path: '/profDetails',
-    //     component: ProfessionDetail
-    // },
     {
         path: '/profession/:profession',
         name: 'professionDetail',
@@ -49,6 +46,11 @@ const routes = [
     {
         path: '/mentors',
         component: Mentors
+    },
+    {
+        path: '/mentor/:id',
+        component: MentorDetails,
+        name: 'MentorDetails'
     },
     {
         path: '/interview',

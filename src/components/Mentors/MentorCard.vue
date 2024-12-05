@@ -1,5 +1,5 @@
 <template>
-    <div class="card max-w-[242px] bg-white shadow-md rounded-md  flex flex-col items-center">
+    <div class="mentor-card card max-w-[242px] bg-white shadow-md rounded-md  flex flex-col items-center">
         <img
             :src="image"
             alt="Фото ментора"
@@ -17,7 +17,10 @@
                     {{ skill }}
                 </span>
             </div>
-            <a href="#" class="orange-theme font-semibold">Посмотреть полностью &gt;</a>
+            <!-- Добавляем ссылку на детальную страницу -->
+            <router-link :to="{ name: 'MentorDetails', params: { id: mentorId } }" class="orange-theme font-semibold">
+                Посмотреть полностью &gt;
+            </router-link>
         </div>
     </div>
 </template>
@@ -25,14 +28,17 @@
 <script>
 export default {
     props: {
+
         image: String,
         name: String,
         role: String,
         company: String,
         skills: Array,
+        mentorId: Number, // ID ментора для передачи в роутер
     },
 };
 </script>
+
 
 <style scoped>
 /* Дополнительные стили, если нужны */
@@ -55,5 +61,9 @@ export default {
 }
 .orange-theme{
     color: #E96852;
+}
+
+@media (max-width: 574px) {
+
 }
 </style>

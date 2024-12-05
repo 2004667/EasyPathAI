@@ -103,9 +103,9 @@ export default {
         max-[767px]:w-full max-[767px]:
         flex drop-shadow-lg bg-[#2F2B2B] text-[#FFFFFF]" id="header">
        <div @click="toLand" class="
-            md:h-[96px] md:w-[390px] md:ml-[55px] 
+            md:h-[96px] md:w-[390px] md:ml-[25px] 
             max-[767px]:w-[390px] max-[767px]:h-[62px]
-            flex  items-center"> 
+            flex items-center"> 
             <img src="
               /images/Land_logo.svg" alt="" class="
               flex items-center 

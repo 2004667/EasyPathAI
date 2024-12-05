@@ -1,8 +1,8 @@
 <template>
   <InfoHeadAI />
   <div class="flex flex-col h-screen">
-    <div class="flex md:w-[70%] max-[767px]:w-[100%] max-[767px]:justify-center md:justify-between flex-grow">
-      <div class="ml-[2.3rem] max-[767px]:hidden">
+    <div class="flex  max-[767px]:w-[100%] max-[767px]:justify-center md:space-x-[11%] min-[1600px]:space-x-[14%]">
+      <div class="ml-[3%] max-[767px]:hidden">
         <AIChatHistory
           :messageHistory="savedMessages"
           @new-chat="resetChat"
@@ -10,8 +10,8 @@
           @remove-message="removeSavedMessage"
         />
       </div>
-      <div class="md:h-screen md:flex md:flex-col md:justify-between md:items-center max-[767px]:flex max-[767px]:flex-col max-[767px]:items-center max-[767px]:w-full">
-        <div v-if="chatHistory.length === 0" class="flex flex-col items-center md:mt-[10%] md:ml-[55%] max-[767px]:ml-0 max-[767px]:mt-0 max-[767px]:w-[80%]">
+      <div class="flex justify-center ">
+        <div v-if="chatHistory.length === 0" class="flex flex-col items-center md:mt-[12%]  max-[767px]:ml-0 max-[767px]:mt-0 max-[767px]:w-[80%]">
           <h1 class="text-[#9A9494] text-[50px] font-[600] text-center">Chat with AI</h1>
           <img src="/images/robot-assistant 1.svg" alt="" width="80px" height="80px" class="mt-[3%]" />
           
@@ -44,6 +44,7 @@
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="fixed bottom-0 left-0 right-0 flex justify-center">

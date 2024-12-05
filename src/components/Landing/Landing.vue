@@ -1,7 +1,7 @@
 <script>
 import InfoHead from './InfoHead.vue';
 import InfoMain from './InfoMain.vue';
-import InfoAIChat from '../Aichat/InfoAIChat.vue';
+import InfoAIChat from './InfoAIChat.vue';
 import Instructions from './Instructions.vue'
 import MentorRequest from './MentorRequest.vue';
 import EasyFooter from './EasyFooter.vue'
